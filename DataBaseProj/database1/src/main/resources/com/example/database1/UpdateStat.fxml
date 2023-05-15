@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #14242b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database1.Controller">
+   <children>
+      <VBox fx:id="vpane" layoutX="14.0" layoutY="138.0" prefHeight="161.0" prefWidth="222.0" style="-fx-border-color: white; -fx-background-color: transparent;" visible="false">
+         <children>
+            <Label fx:id="updname" alignment="CENTER" layoutX="11.0" layoutY="91.0" prefHeight="40.0" prefWidth="264.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Label" textFill="WHITE" />
+            <Label fx:id="updemail" alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Label" textFill="WHITE" />
+            <Label fx:id="updphone" alignment="CENTER" layoutX="11.0" layoutY="31.0" prefHeight="40.0" prefWidth="254.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Label" textFill="WHITE" />
+            <Label fx:id="updudegree" alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="40.0" prefWidth="264.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Label" textFill="WHITE" />
+         </children>
+      </VBox>
+      <HBox layoutX="14.0" layoutY="36.0" prefHeight="78.0" prefWidth="266.0">
+         <children>
+            <VBox prefHeight="93.0" prefWidth="138.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="136.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Confirm your User Name" textFill="WHITE" />
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Confirm your password" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox prefHeight="118.0" prefWidth="126.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <TextField fx:id="updusername" prefHeight="66.0" prefWidth="118.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="upduserpass" prefHeight="65.0" prefWidth="125.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="292.0" layoutY="82.0" mnemonicParsing="false" onAction="#confirmupdate" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Confirm" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="updatestat" layoutX="368.0" layoutY="312.0" mnemonicParsing="false" onAction="#update" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Update" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <HBox fx:id="hpane" layoutX="284.0" layoutY="137.0" prefHeight="162.0" prefWidth="168.0" style="-fx-border-color: white;" visible="false">
+         <children>
+            <VBox prefHeight="162.0" prefWidth="89.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Name:" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Email:" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="51.0" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Phone" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="91.0" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Degree" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox prefHeight="130.0" prefWidth="89.0" style="-fx-border-color: white;">
+               <children>
+                  <TextField fx:id="newname" prefHeight="39.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: transparent;" />
+                  <TextField fx:id="newemail" layoutX="11.0" layoutY="11.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: transparent;" />
+                  <TextField fx:id="newphone" layoutX="11.0" layoutY="38.0" prefHeight="42.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: transparent;" />
+                  <TextField fx:id="newdegree" layoutX="11.0" layoutY="65.0" prefHeight="40.0" prefWidth="82.0" style="-fx-border-color: white; -fx-background-color: transparent;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

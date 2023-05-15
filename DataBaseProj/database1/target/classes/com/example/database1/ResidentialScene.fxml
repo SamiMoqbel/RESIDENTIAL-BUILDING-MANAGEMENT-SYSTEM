@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="487.0" prefWidth="918.0" style="-fx-border-radius: 25;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database1.Controller">
+   <children>
+      <ImageView fitHeight="645.0" fitWidth="918.0" opacity="0.21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://www.wienerberger.in/references/projects/residential-buildings/jcr:content/root/hero/second-image/image.imgTransformer/crop_8to5/lg-5/1617007529493/DSC_3216-format720x477cropped.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="61.0" prefHeight="411.0" prefWidth="265.0" spacing="10.0">
+         <children>
+            <Button fx:id="buildingInfoButton" mnemonicParsing="false" onAction="#onBuildingInfoButtonClicked" prefHeight="40.0" prefWidth="221.0" stylesheets="@dashboardButtons.css" text="Building Info">
+               <font>
+                  <Font name="Maiandra GD" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onForSellButtonClicked" prefHeight="40.0" prefWidth="222.0" stylesheets="@dashboardButtons.css" text="Availabile For sell Flats">
+               <font>
+                  <Font name="Maiandra GD" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onForRentButtonClicked" prefHeight="40.0" prefWidth="220.0" stylesheets="@dashboardButtons.css" text="Availabile For Rent Flats">
+               <font>
+                  <Font name="Maiandra GD" size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onServicesButtonClicked" prefHeight="40.0" prefWidth="220.0" stylesheets="@dashboardButtons.css" text="Back">
+               <font>
+                  <Font name="Maiandra GD" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="200.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="48.0" fitWidth="141.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://pngimg.com/uploads/building/small/building_PNG87.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="labelsBox" alignment="TOP_CENTER" layoutX="279.0" layoutY="46.0" prefHeight="440.0" prefWidth="265.0" spacing="20.0" visible="false">
+         <children>
+            <Label prefHeight="48.0" prefWidth="228.0" text="Residential Name :">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="226.0" text="Residential Address :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Residential number of flats :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Residential phone number  :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Residential support email :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Residential built year :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="outputBox" alignment="TOP_CENTER" layoutX="607.0" layoutY="46.0" prefHeight="440.0" prefWidth="265.0" spacing="20.0" visible="false">
+         <children>
+            <Label fx:id="resName" prefHeight="48.0" prefWidth="228.0" text="-">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="resAddress" prefHeight="48.0" prefWidth="226.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="resNumberOfFlats" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="resPhone" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="resEmail" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="resBuiltYear" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ComboBox fx:id="sellFlatsBox" layoutX="343.0" layoutY="76.0" prefHeight="40.0" prefWidth="463.0" promptText="Select Flats to Show" stylesheets="@comboBox.css" visible="false" />
+      <Button fx:id="sellFlatsCheckButton" layoutX="669.0" layoutY="361.0" mnemonicParsing="false" onAction="#onSellFlatsCheckButtonClicked" prefHeight="40.0" prefWidth="141.0" stylesheets="@dashboardButtons.css" text="See Info" visible="false">
+         <font>
+            <Font name="Maiandra GD" size="16.0" />
+         </font>
+      </Button>
+      <VBox fx:id="labelsBox1" alignment="TOP_CENTER" layoutX="289.0" layoutY="56.0" prefHeight="440.0" prefWidth="265.0" spacing="20.0" visible="false">
+         <children>
+            <Label prefHeight="48.0" prefWidth="228.0" text="Flat Number :">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="226.0" text="Flat Name :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Flat Area:">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Flat rooms count">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Flat Price">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="outputBox1" alignment="TOP_CENTER" layoutX="617.0" layoutY="56.0" prefHeight="440.0" prefWidth="265.0" spacing="20.0" visible="false">
+         <children>
+            <Label fx:id="sellFlatNo" prefHeight="48.0" prefWidth="228.0" text="-">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="sellFlatName" prefHeight="48.0" prefWidth="226.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="sellFlatArea" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="sellFlatRoomCount" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="sellFlatPrice" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="labelsBox2" alignment="TOP_CENTER" layoutX="299.0" layoutY="66.0" prefHeight="440.0" prefWidth="265.0" spacing="20.0" visible="false">
+         <children>
+            <Label prefHeight="48.0" prefWidth="228.0" text="Flat Number :">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="226.0" text="Flat Name :">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Flat Area:">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Flat rooms count">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="48.0" prefWidth="227.0" text="Flat Rent">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="outputBox2" alignment="TOP_CENTER" layoutX="627.0" layoutY="66.0" prefHeight="440.0" prefWidth="265.0" spacing="20.0" visible="false">
+         <children>
+            <Label fx:id="rentFlatNo" prefHeight="48.0" prefWidth="228.0" text="-">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rentFlatName" prefHeight="48.0" prefWidth="226.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rentFlatArea" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rentFlatRoomCount" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="rentFlatPrice" prefHeight="48.0" prefWidth="227.0" text="-">
+               <font>
+                  <Font name="Calisto MT Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ComboBox fx:id="rentFlatsBox" layoutX="353.0" layoutY="86.0" prefHeight="40.0" prefWidth="463.0" promptText="Select Flats to Show" stylesheets="@comboBox.css" visible="false" />
+      <Button fx:id="rentFlatsCheckButton" layoutX="679.0" layoutY="371.0" mnemonicParsing="false" onAction="#onRentFlatsCheckButtonClicked" prefHeight="40.0" prefWidth="141.0" stylesheets="@dashboardButtons.css" text="See Info" visible="false">
+         <font>
+            <Font name="Maiandra GD" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="rentReserveButton" layoutX="679.0" layoutY="401.0" mnemonicParsing="false" onAction="#onRentReserveButtonClicked" prefHeight="40.0" prefWidth="161.0" stylesheets="@dashboardButtons.css" text="Reserve" visible="false">
+         <font>
+            <Font name="Maiandra GD" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="sellReserveButton" layoutX="689.0" layoutY="411.0" mnemonicParsing="false" onAction="#onSellReserveButtonClicked" prefHeight="40.0" prefWidth="161.0" stylesheets="@dashboardButtons.css" text="Reserve" visible="false">
+         <font>
+            <Font name="Maiandra GD" size="16.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="rentChoice" layoutX="412.0" layoutY="411.0" prefHeight="40.0" prefWidth="222.0" promptText="Select Duration..." stylesheets="@comboBox.css" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bpane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database1.Controller">
+   <left>
+      <VBox prefHeight="370.0" prefWidth="110.0" style="-fx-background-color: #0D1824;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AddFlatScene" prefHeight="42.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-cursor: hand;" text="Add Flat" textFill="#e7f2ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#UpdateFlatScene" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-cursor: hand;" text="Update Flat" textFill="#e7f2ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="95.0" mnemonicParsing="false" onAction="#DeleteFlatScene" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-cursor: hand;" text="Delete Flat" textFill="#e7f2ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button disable="true" layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#AddAdmin_Scene" prefHeight="202.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" textFill="#e7f2ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#Switch_to_AdminScene" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-cursor: hand;" text="Back" textFill="#e7f2ff">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="apane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #14242b;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="366.0" fitWidth="492.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://media.istockphoto.com/id/1177797403/photo/modern-apartment-buildings-on-a-sunny-day-with-a-blue-sky.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=DWSGDBDTRVlA7KbY_xjDXgrA3bA4nshwaPKwKj35rrY=" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </center>
+   <top>
+      <HBox prefHeight="21.0" prefWidth="600.0" style="-fx-background-color: #0D1824; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="542.0" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#Switch_to_LoginScene" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 2px 0px 2px; -fx-cursor: hand;" text="Log Out" textFill="#cc1b00" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

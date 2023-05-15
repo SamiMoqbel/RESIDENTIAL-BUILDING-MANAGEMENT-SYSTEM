@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="557.0" prefWidth="978.0" style="-fx-border-radius: 25;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database1.Controller">
+   <children>
+      <ImageView fitHeight="557.0" fitWidth="992.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://www.atypicalfinance.com/wp-content/uploads/2018/10/Homepage-background.jpg" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" prefHeight="46.0" prefWidth="975.0" style="-fx-background-color: 2;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onHomeButtonClicked" prefHeight="29.0" prefWidth="102.0" stylesheets="@customerButtons.css" text="Home" textAlignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#onServicesButtonClicked" prefHeight="29.0" prefWidth="102.0" stylesheets="@customerButtons.css" text="Services" textAlignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#onAboutUsButtonClicked" prefHeight="29.0" prefWidth="102.0" stylesheets="@customerButtons.css" text="About us" textAlignment="CENTER" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Button fx:id="logout" layoutX="16.0" layoutY="519.0" mnemonicParsing="false" onAction="#Switch_to_LoginScene" prefHeight="29.0" prefWidth="102.0" stylesheets="@customerLogOutButton.css" text="Log Out" textAlignment="CENTER" />
+      <ImageView fitHeight="63.0" fitWidth="143.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://pngimg.com/uploads/building/small/building_PNG87.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="204.0" layoutY="118.0" prefHeight="309.0" prefWidth="596.0" text="Welcome to customer portal" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="55.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+drop database if exists real_estate;
+create database Real_Estate ;
+
+use Real_Estate;
+create table if not exists Employee(
+	EMP_id varchar(32),
+    EMP_Email varchar(25),
+	EMP_Name varchar(25),
+	EMP_UniverstyDegree varchar(25),
+	EMP_Salary real,
+    EMP_phone int,
+    primary key(emp_id)
+);
+insert into Employee(EMP_id,EMP_Email,emp_name,emp_universtydegree,emp_salary,emp_phone) values('khuffash','khuffash@admin.com','Abd Khuffash','bachelor degree in CSE','2500','0569950207');
+select * from Employee;
+
+create table if not exists Residental_Building (
+	RB_SupportEmail varchar(25),
+	RB_Address varchar(25),
+	RB_NumberOfFlats int,
+	RB_Name varchar(25),
+	RB_PhoneNumber int,
+	RB_ID varchar(32),
+    Built_year varchar(32),
+    emp_id varchar(32),
+	primary key (RB_ID),
+	foreign key (emp_id) references Employee(Emp_id) 
+);
+insert into Residental_Building(Rb_id,rb_name,RB_SupportEmail,RB_Address,RB_NumberOfFlats,RB_PhoneNumber,Built_year,emp_id) values ('khb','Khuffash Residantal','khb@gmail.com','300st Palestine','9','024521','1999','khuffash');
+select * from Residental_Building;
+
+create table IF Not exists Customers(
+	CUST_Email varchar(25),
+	CUST_Name varchar(25),
+	CUST_ID varchar(32),
+    CUST_phone int,
+	primary key (CUST_ID)
+);
+insert into Customers(cust_id,CUST_Email,CUST_Name,CUST_phone) values ('Sami','s@gmai.com','Sami Moqbel','0599999');
+select * from customers;
+
+create table if not exists Flats_RB (
+	Flat_id int,
+    room_count int,
+    flat_name varchar(32),
+    area real,
+	RB_ID varchar(32),
+    primary key(flat_id),
+    foreign key (RB_ID) references Residental_Building(RB_ID) 
+);
+insert into Flats_RB(flat_id,room_count,flat_name,area,Rb_id) values(69,3,'Khuffashroom',12.2,'khb');
+insert into Flats_RB(flat_id,room_count,flat_name,area,Rb_id) values(71,1,'room2',3,'khb');
+insert into Flats_RB(flat_id,room_count,flat_name,area,Rb_id) values(72,1,'room2',3,'khb');
+insert into Flats_RB(flat_id,room_count,flat_name,area,Rb_id) values(70,5,'ahmadroom',24.2,'khb');
+select * from flats_rb;
+
+create table if not exists Rent_flats(
+	RF_id int,
+    price_month real,
+    duration int,
+    cust_id varchar(32),
+    primary key (RF_id),
+    foreign key(cust_id) references Customers(cust_id),
+    foreign key(RF_id) references Flats_RB(Flat_id) on delete cascade on update cascade
+);
+insert into Rent_flats(RF_id,price_month,duration,cust_id) values (69,200.2,2,'Sami');
+insert into Rent_flats(RF_id,price_month,duration,cust_id) values (71,200.2,2,'Sami');
+select * from rent_flats;
+##if duration and cust id are null then not reserved***
+
+create table if not exists Sell_flats(
+	SF_id int,
+    price real,
+    cust_id varchar(32),
+    primary key (SF_id),
+    foreign key(cust_id) references Customers(cust_id),
+    foreign key(SF_id) references Flats_RB(Flat_id) on delete cascade on update cascade
+);
+insert into Sell_flats(sf_id,price,cust_id) values (70,25000,'Sami');
+ 
+select * from Sell_flats;
+
+create table if not exists Users(
+	username varchar(320) ,
+    pass_word varchar(320),
+    typeu varchar(32)
+);
+insert into  Users (username,pass_word,typeu) values ('khuffash','kh1337','a');
+insert into  Users (username,pass_word,typeu) values ('Sami','sami123','c');
+
+select * from users;
+select * from customers;
+
+select username from users where username='ahmad';
+
+select cust_id,rf_id from rent_flats where cust_id IS NOT NULL AND rf_id=any(select flat_id from flats_rb where RB_ID='khb');
+select cust_id,sf_id from sell_flats where sf_id=any(select flat_id from flats_rb where RB_ID='khb');
+
+
+
+
+
+

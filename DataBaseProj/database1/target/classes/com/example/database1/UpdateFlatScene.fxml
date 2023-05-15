@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #14242b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database1.Controller">
+   <children>
+      <HBox layoutX="21.0" layoutY="29.0" prefHeight="58.0" prefWidth="271.0">
+         <children>
+            <VBox prefHeight="58.0" prefWidth="164.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="29.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Confirm your User Name:" textFill="WHITE" />
+                  <Label layoutX="11.0" layoutY="11.0" prefHeight="29.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Enter RB ID to update it's flats:" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox prefHeight="58.0" prefWidth="105.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <TextField fx:id="updateusernamef" prefHeight="30.0" prefWidth="104.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="rbidupdate" layoutX="11.0" layoutY="11.0" prefHeight="46.0" prefWidth="125.0" promptText="RB ID" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="300.0" layoutY="58.0" mnemonicParsing="false" onAction="#confirmcheckUpdateflat" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Confirm" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <HBox fx:id="hbox1" layoutX="21.0" layoutY="121.0" prefHeight="32.0" prefWidth="271.0" visible="false">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: white;" text="Enter A Flat id to Update" textFill="WHITE" />
+            <TextField fx:id="flatidupdate" prefHeight="30.0" prefWidth="110.0" promptText="Flat Id" style="-fx-background-color: transparent; -fx-border-color: white;" />
+         </children>
+      </HBox>
+      <Button fx:id="getdatab" layoutX="300.0" layoutY="121.0" mnemonicParsing="false" onAction="#getflatdataupdate" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Get Data" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="confirmuplb" layoutX="21.0" layoutY="90.0" prefHeight="18.0" prefWidth="271.0" textFill="RED" />
+      <Label fx:id="findfidupdate" layoutX="21.0" layoutY="153.0" prefHeight="18.0" prefWidth="162.0" textFill="RED" />
+      <HBox fx:id="hbox2" layoutX="21.0" layoutY="200.0" prefHeight="158.0" prefWidth="271.0" visible="false">
+         <children>
+            <VBox prefHeight="161.0" prefWidth="164.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Enter New Name:" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Enter New Room Count:" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="51.0" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Enter New Area:" textFill="WHITE" />
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="71.0" prefHeight="40.0" prefWidth="162.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Enter New Price:" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox prefHeight="162.0" prefWidth="106.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <TextField fx:id="newnameupd" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="newrcupd" layoutX="11.0" layoutY="11.0" prefHeight="42.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="newareaupd" layoutX="11.0" layoutY="11.0" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="newpriceupdate" layoutX="11.0" layoutY="67.0" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="updateb" layoutX="300.0" layoutY="326.0" mnemonicParsing="false" onAction="#UpdateFlatsB" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Update" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

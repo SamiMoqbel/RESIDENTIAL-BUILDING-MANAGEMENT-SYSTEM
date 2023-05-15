@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #14242b;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database1.Controller">
+   <children>
+      <Button fx:id="rentb" layoutX="20.0" layoutY="135.0" mnemonicParsing="false" onAction="#VisibleitemRent" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Rent Flat" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="sellb" layoutX="131.0" layoutY="135.0" mnemonicParsing="false" onAction="#VisibleitemSell" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Sell Flat" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <VBox fx:id="vbox5" layoutX="20.0" layoutY="173.0" prefHeight="184.0" prefWidth="100.0" style="-fx-border-color: white;" visible="false">
+         <children>
+            <TextField fx:id="rflatid" alignment="CENTER" prefHeight="46.0" prefWidth="125.0" promptText="Flat ID" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="rflatname" alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="46.0" prefWidth="125.0" promptText="Flat Name" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="rflatcount" alignment="CENTER" layoutX="11.0" layoutY="57.0" prefHeight="46.0" prefWidth="125.0" promptText="Room Count" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="rflatarea" alignment="CENTER" layoutX="11.0" layoutY="104.0" prefHeight="46.0" prefWidth="125.0" promptText="Area" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="rflatpmonth" alignment="CENTER" layoutX="11.0" layoutY="112.0" prefHeight="46.0" prefWidth="125.0" promptText="Price Per Month" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </VBox>
+      <VBox fx:id="vbox6" layoutX="131.0" layoutY="173.0" prefHeight="184.0" prefWidth="100.0" style="-fx-border-color: white;" visible="false">
+         <children>
+            <TextField fx:id="sflatid" alignment="CENTER" prefHeight="46.0" prefWidth="125.0" promptText="Flat ID" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="sflatname" alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="46.0" prefWidth="125.0" promptText="Flat Name" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="sflatcount" alignment="CENTER" layoutX="11.0" layoutY="57.0" prefHeight="46.0" prefWidth="125.0" promptText="Room Count" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="sflatarea" alignment="CENTER" layoutX="11.0" layoutY="104.0" prefHeight="46.0" prefWidth="125.0" promptText="Area" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="sflatprice" alignment="CENTER" layoutX="11.0" layoutY="112.0" prefHeight="46.0" prefWidth="125.0" promptText="Price" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </VBox>
+      <Button fx:id="addflat" layoutX="243.0" layoutY="325.0" mnemonicParsing="false" onAction="#AddFlatB" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Add" textFill="WHITE" visible="false">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <HBox layoutX="20.0" layoutY="32.0" prefHeight="58.0" prefWidth="271.0">
+         <children>
+            <VBox prefHeight="58.0" prefWidth="161.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="146.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Confirm your User Name:" textFill="WHITE" />
+                  <Label layoutX="11.0" layoutY="11.0" prefHeight="46.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Enter RB ID to Insert flat to:" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox prefHeight="58.0" prefWidth="132.0" style="-fx-border-color: white; -fx-background-color: transparent;">
+               <children>
+                  <TextField fx:id="addusernamef" prefHeight="46.0" prefWidth="125.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="rbidaddflat" layoutX="11.0" layoutY="11.0" prefHeight="46.0" prefWidth="125.0" promptText="RB ID" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="300.0" layoutY="61.0" mnemonicParsing="false" onAction="#ConfirmAddf" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px; -fx-cursor: hand; -fx-background-radius: 90;" text="Confirm" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="warnaddconf" layoutX="70.0" layoutY="93.0" prefHeight="18.0" prefWidth="193.0" textFill="RED" />
+      <Label fx:id="checkerl" layoutX="264.0" layoutY="183.0" prefHeight="18.0" prefWidth="150.0" textFill="RED" />
+   </children>
+</AnchorPane>
